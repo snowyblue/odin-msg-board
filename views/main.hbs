@@ -1,3 +1,9 @@
 <main>
-    <h1>Wow, a working view!</h1>
+    <h1>Wow, {{title}}!</h1>
+    {{#each messages}}
+        <p>Name: {{this.user}}</p>
+        <p>Message: {{this.text}}</p>
+        <p>Date: {{this.added}}</p>
+        <hr>
+    {{/each}}
 </main>
