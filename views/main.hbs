@@ -1,5 +1,8 @@
 <main>
-    <h1>Wow, {{title}}!</h1>
+    <div class="container">
+        <a href="http://localhost:3000/newpost" class="addmsg">Add Message</a>
+    </div>
+    <h1>{{title}}!</h1>
     {{#each messages}}
         <p>Name: {{this.user}}</p>
         <p>Message: {{this.text}}</p>
