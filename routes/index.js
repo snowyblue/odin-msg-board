@@ -24,4 +24,8 @@ router.post('/newpost', (req, res, next) => {
   res.redirect('/');
 })
 
+router.get('/newpost', (req, res, next) => {
+  res.render('../views/form');
+})
+
 module.exports = router;
