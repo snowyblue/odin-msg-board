@@ -10,7 +10,6 @@ const url = `mongodb+srv://general_user:${password}@cluster0.nbp0qcd.mongodb.net
 mongoose.set('strictQuery',false);
 mongoose.connect(url)
 
-
 const postSchema = new mongoose.Schema({
   text: String,
   user: String,
@@ -46,4 +45,5 @@ router.post('/newpost', function(req, res) {
   })
 })
 
-module.exports = router
+module.exports = router;
+
