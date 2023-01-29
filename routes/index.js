@@ -11,7 +11,6 @@ const postSchema = new mongoose.Schema({
   user: String,
   added: Date,
 })
-
 const Post = mongoose.model('posts',postSchema);
 
 /* GET home page. */
@@ -23,6 +22,7 @@ router.get(['/','/home'], function(req, res, next) {
   })
 });
 
+/* POST add new post & redirect to home page */
 router.post('/newpost', function(req, res) {
   const { user, text }  = req.body;
   
