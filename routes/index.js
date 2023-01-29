@@ -2,7 +2,10 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 
-const password = 'NenEENpbSQFzUiF6';
+const dotenv = require('dotenv')
+dotenv.config()
+
+const password = process.env.DB_PASSWORD;
 const url = `mongodb+srv://general_user:${password}@cluster0.nbp0qcd.mongodb.net/odinposts?retryWrites=true&w=majority`
 mongoose.set('strictQuery',false);
 mongoose.connect(url)
