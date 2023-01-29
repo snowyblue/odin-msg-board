@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars')
 
-const indexRouter = require('./routes/index');
+const { indexRouter } = require('./routes/index');
 const newpostRouter = require('./routes/newpost')
 
 const app = express();
@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use(['/', '/home'], indexRouter);
 app.use('/newpost', newpostRouter);
 
 // catch 404 and forward to error handler
