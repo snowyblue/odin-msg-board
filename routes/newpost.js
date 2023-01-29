@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { messages }= require('./index.js')
+const { messages } = require('./index.js')
 
   router.get('/', (req, res, next) => {
     res.render('../views/form');
@@ -8,7 +8,6 @@ const { messages }= require('./index.js')
 
   router.post('/', function(req, res) {
     const { user, text }  = req.body
-    console.log(user, text)
     messages.push({text: text, user: user, added: new Date()});
     res.redirect('/')
   })
