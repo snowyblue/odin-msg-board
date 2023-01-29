@@ -3,11 +3,10 @@
         <a href="http://localhost:3000/newpost" class="addmsg">Add Message</a>
     </div>
     <h1>{{title}}!</h1>
-    <p> {{messages}}</p>
-    {{!-- {{#each messages}}
+    {{#each messages}}
         <p>Name: {{this.user}}</p>
         <p>Message: {{this.text}}</p>
         <p>Date: {{this.added}}</p>
         <hr>
-    {{/each}} --}}
+    {{/each}}
 </main>
